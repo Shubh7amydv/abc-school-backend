@@ -4,6 +4,8 @@ require('dotenv').config();
 
 const app = express();
 
+app.use(cors());
+
 // import routes
 const enquiryRoutes = require('./routes/enquiry.routes');
 const careerRoutes = require('./routes/careers.routes');
@@ -12,7 +14,7 @@ const activityRoutes = require('./routes/activity.routes');
 const updateRoutes = require('./routes/update.routes');
 
 // middleware
-app.use(cors());
+
 app.use(express.json());
 
 // test route
